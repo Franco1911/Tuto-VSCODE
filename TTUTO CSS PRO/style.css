@@ -1,0 +1,33 @@
+
+/*SELECTOR UNIVERSAL
+* {
+    color: blue;
+    font-size: 30px;
+}
+
+SELECTOR DE TIPO*/
+/*p {
+    color: crimson;
+    font-size: 30px;
+}*/
+
+/*.titulo {
+    color: brown;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+#titulo {
+    color: blue;
+    font-size: 30px;
+}*/
+
+ /*combinador de selectores
+.abuelito .titulo {
+    color: red;
+    font-size: 40px;
+}
+
+.abuelito> .titulo {
+    color: blue;
+}*/

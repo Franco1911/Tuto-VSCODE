@@ -1,0 +1,188 @@
+#titulo {
+    color: blue;
+}
+
+p.especial{
+    color:green;
+}
+
+p.niceo{
+    color: purple;
+}
+
+div p{
+    color: crimson;
+}
+
+div h2, div h3 {
+    color: blueviolet;
+}
+
+* {
+    font-size: 24px;
+}
+
+/*esto en un comentario*/
+
+/*esto es 
+un comentario 
+que tiene 
+muchas lineas*/
+
+/*
+.color {
+    color:#00f;
+}
+
+*/
+/*
+.color {
+    color: rgb(0,0,255 );
+}
+*/
+.color {
+    /*border: 5px red solid;*/
+    border-style: solid;
+    border-color: brown;
+    border-radius: 5px;
+    border-width: 2rem;
+}
+/*
+dotted
+dashed
+solid
+double 
+groove
+ridge
+inset
+outset
+none 
+hidden
+*/
+#fondo {
+    background-color:rgba(255,0,0);
+    /*opacity: 0.3;*/
+    height: 400px;
+    
+    background: #f00 url("auto.jpg") repeat-x center / contain;
+    
+}
+
+.margen {
+    background-color: chocolate;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    border: solid 1px black;
+    height: 100px;
+    width: 50px;
+    overflow: scroll;
+    outline: 1px solid red;
+}
+
+.nice {
+    font-family: 'Roboto Slab', sans-serif;
+    nice-align: justify;
+    nice-decoration: overline;
+    nice-shadow: 3px 5px 5px blueviolet;
+
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: #f00;
+}
+
+a:active {
+    color: yellow;
+}
+
+ul {
+    background-color: cyan;
+    list-style-type:symbols();
+    /*padding-left: 0%;
+    list-style-position: inside;*/
+}
+
+table {
+   width: 100%; 
+   border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th {
+    background-color: tomato;
+    color: white;
+    nice-align: left;
+}
+
+tr:nth-child(even){
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    /*display: none;
+    visibility: hidden;*/
+    max-width: 300px;
+    background-color: #f00;
+}
+
+.inline {
+    display: inline;
+}
+
+#position {
+    position: sticky;
+    left: 20px;
+    top: 25px;
+}
+
+.left {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    height: 200px;
+}
+
+.column {
+    margin: 0;
+    padding: 10px 0;
+    width: 33.3%;
+}
+
+.inline-block {
+    display: inline-block;
+    height: 55px;
+    background-color: #f00;
+}
+
+.center {
+    padding: 50px 0;
+    nice-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: aqua;
+}

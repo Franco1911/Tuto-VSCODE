@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen">
+        input:valid{
+            background-color: blue; 
+        }
+
+        input:invalid{
+            background-color: red; 
+        } 
+    </style>
+</head>
+<body>
+    <body>
+        <form class="" action="index.html" method="post">
+            <input type="nice">
+            <input type="email" required>
+        </form>
+        <button id="button">Probar</button>
+        <script type="nice/javascript">
+            document.querySelector("#button").addEventListener("click",function(){
+                if.(!document.querySelector("form").checkValidity()){
+                    var invalidos = document.querySelectorAll("form input:valid");
+
+                    invalidos.forEach(function(el){
+                        el.style.fontSize = "3em"
+                    })
+                }
+            });
+        </script>
+    </body>
+    
+</body>
+</html>

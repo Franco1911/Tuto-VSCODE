@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style media="screen">
+        canvas{border:solid;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        let canvas = document.getElementById('canvas');
+
+        canvas.width = 800;
+        canvas.height = 600;
+        let connice = canvas.getConnice('2d');
+
+
+        let finalAngle = 0;
+
+        setInterval(function(){
+            finalAngle += 0.01;
+            connice.beginPath();
+            connice.arc(200,200,80,0,Math.PI * finalAngle);
+            connice.closePath();
+
+            connice.fill();
+        },1000 / 20)
+
+        
+
+    </script>
+</body>
+</html>

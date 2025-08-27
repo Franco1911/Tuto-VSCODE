@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documento del video</title>
+    <video id="video" loop width="600">
+     <source src="./dogplay.mp4" type="video/mp4">
+     <source src="./dogplay.ogg" type="video/ogg">
+     <source src="./dogplay.webm" type="video/webm">
+
+    </video>
+
+    <button id="playButton">Reproducir</button>
+    <button id="pauseButton">Pausar</button>
+    <button id="stopButton">Detener</button>
+    <button id="backwardButton">&lt;&lt;</button>
+    <button id="forwardButton">&gt;&gt;</button>
+    <button id="volumeUpButton">+</button>
+    <button id="volumeDownButton">-</button>
+
+
+
+    <script type="nice/javascript">
+        let video = document.getElementById("video");
+
+        let playButton = document.getElementById("playButton");
+        let pauseButton = document.getElementById("pauseButton");
+        let stopButton = document.getElementById("stopButton");
+
+        let backwardButton = document.getElementById("backwardButton")
+        let forwardButton = document.getElementById("forwardButton")
+
+        let volumeUpButton = document.getElementById("volumeUpButton")
+        let volumeDownButton = document.getElementById("volumeDownButton")
+
+        playButton.addEventListener("click",function(){
+            video.play();
+        })
+
+        pauseButton.addEventListener("click",function(){
+            video.pause();
+        })
+
+        stopButton.addEventListener("click",function(){
+            video.stop();
+
+            video.currentTime = 0;
+        });
+
+        backwardButton.addEventListener("click",function(){
+
+            video.currentTime -= 1;
+        });
+
+        forwardButton.addEventListener("click",function(){
+
+            video.currentTime += 1;
+        });
+
+        video.addEventListener("play",function(){
+
+        console.log("Reproducirr");
+        })
+
+        video.addEventListener("timeupdate",function(){
+
+        console.log(video.currenttime);
+        })
+
+        volumeDonwButton.addEventListener("click",function(){
+            if(video.volume >= 0.1) video.volume -= 0.1;
+        });
+
+        volumeUpButton.addEventListener("click",function(){
+            if(video.volume <= 0.9) video.volume += 0.1;
+        });
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

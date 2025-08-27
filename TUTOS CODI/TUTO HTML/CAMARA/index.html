@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camara</title>
+</head>
+<body>
+    <select id="Camara-selector">
+
+    </select>
+    <video id="video" autoplay>
+    </video>
+</body>
+<script>
+    let video = document.getElementById('video');
+    let selectTag = document.getElementById('camara-selector');
+    //Media Track Constraints
+    //Audio
+    /*ChannelCount => {Ideal:10, exact:10}
+    latency
+    SampleRate
+    Volume*/
+    navigator.mediaDevices.enumerateDevices(). then(devices => {
+        devices.forEach(device => {
+            if(device.kind !="videoinput") return;
+
+            let optionTag = document.createElement("option");
+
+            optionTag.innerHTML = device.label;
+            optionTag.value = device.deviceId;
+
+            selectTag.appendChild(optionTag);
+
+        })
+
+    })
+
+    selectTag.addEventListener("change", function(ev){
+        let deviceId = this.options[this.selectedIndex].value;
+        start(deviceId);
+    })
+
+    function start(deviceId = undefined){
+        const Constraints = {
+        audio:{
+    video: {
+        deviceId : deviceId
+    }
+}
+    navigator.mediaDevices.getUserMedia(Constraints)
+        .then(stream => {
+            video.srcObjet = stream;
+        })
+        .catch(err => console.log(err));
+    }
+
+    start();
+
+    
+</script>
+</html>

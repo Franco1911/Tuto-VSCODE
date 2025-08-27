@@ -1,0 +1,20 @@
+.video-player{
+    position: relative;
+    display: inline-block:
+}
+
+.controls{
+    position: relative;
+    top: 0px;
+    left: 0px
+    height: 100%;
+    width: 100%;
+    background-color: rgba(200,50,50,0.8);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}

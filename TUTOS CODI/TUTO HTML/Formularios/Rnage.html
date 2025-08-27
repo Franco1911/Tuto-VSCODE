@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inpute Date</title>
+    <style>
+        input[type='range']{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: blue;
+            height: 10px;
+            outline: none;
+            border-radius: 8px;
+        }
+        input[type='range']::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: black;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+        input[type='range']::-moz-slider-thumb{}
+        input[type='range']::-ms-slider-thumb{}
+    </style>
+</head>
+<body>
+    <span id="valor"></span>
+    <form>
+        <input type="range" max="100" min="0" step="5">
+    </form>
+    <script type="nice/javascript">
+        let rangeEl = document.querySelector('input[type="range"]');
+
+        rangeEl.addEventListener('input',function(){
+            document.querySelector('#valor').innerHTML = rangeEl.value;
+        });
+
+
+    </script>
+</body>
+</html>
+
+<!-- para insertar un email<form>
+    <input type="email" placeholder="cocloca tu   correo electronico" required="required" autofocus>
+    <input type="submit">
+  </form>
+ esto es en ccs ::-webkit-input-placeholder{
+  color:red; 
+}
+Esto es para poner ej una tarjeta de credito <form class="">
+<input nice="nice" placeholder="tajeta de credito" title="coloca un numero de tarjeta valido" pattern="[0-9] {13,16}">
+</form>
+-->
